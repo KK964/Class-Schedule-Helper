@@ -1,0 +1,37 @@
+{
+  "time": {
+    "monday": {
+      "1": "8:34 AM",
+      "2": "9:18 AM",
+      "3": "10:02 AM",
+      "4": "10:46 AM",
+      "5": "11:30 AM",
+      "6": "12:14 PM",
+      "7": "12:58 PM",
+      "8": "1:42 PM",
+      "9": "2:26 PM"
+    },
+    "tuesday_friday": {
+      "1": "8:00 AM",
+      "2": "8:48 AM",
+      "3": "9:36 AM",
+      "4": "10:24 AM",
+      "5": "11:12 AM",
+      "6": "12:00 PM",
+      "7": "12:48 PM",
+      "8": "1:36 PM",
+      "9": "2:24 PM"
+    }
+  },
+  "classes": {
+    "1": ["English", "CLASS JOIN LINK"],
+    "2": ["Physical Science", "CLASS JOIN LINK"],
+    "3": ["Personal Fitness", "CLASS JOIN LINK"],
+    "4": ["Geometry", "CLASS JOIN LINK"],
+    "5": ["German", "CLASS JOIN LINK"],
+    "6": ["Orchestra", "CLASS JOIN LINK"],
+    "7": ["Lunch", null],
+    "8": ["Graphics", "CLASS JOIN LINK"],
+    "9": ["2D Studio", "CLASS JOIN LINK"]
+  }
+}
