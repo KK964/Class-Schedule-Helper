@@ -2,6 +2,8 @@ const terminalLink = require('terminal-link');
 const classes = require('./classes.json');
 var periods = [];
 var times = [];
+var totalClasses;
+
 const options = {
   hour: 'numeric',
   minute: 'numeric',
@@ -19,22 +21,24 @@ function getClasses() {
 
 function getTimes() {
   return new Promise((res, rej) => {
-    var noSchool = [0, 6];
-    var monday = [1];
-    var other = [2, 3, 4, 5];
+    var noSchool = classes.days.no_school;
+    var a_days = classes.days.a_days;
+    var b_days = classes.days.b_days;
     d = new Date();
     var day = d.getDay();
     if (noSchool.includes(day)) res(console.log('No School Today'));
-    if (monday.includes(day)) {
-      for (let i = 1; i < 10; i++) {
-        times.push(classes.time.monday[i]);
-        if (i == 9) res();
+    if (a_days.includes(day)) {
+      totalClasses = a_days.length;
+      for (let i = 1; i <= totalClasses; i++) {
+        times.push(classes.time.a_day[i]);
+        if (i == totalClasses) res();
       }
     }
-    if (other.includes(day)) {
-      for (let i = 1; i < 10; i++) {
-        times.push(classes.time.tuesday_friday[i]);
-        if (i == 9) res();
+    if (b_days.includes(day)) {
+      totalClasses = b_days.length;
+      for (let i = 1; i <= totalClasses; i++) {
+        times.push(classes.time.b_day[i]);
+        if (i == totalClasses) res();
       }
     }
   });
@@ -53,9 +57,9 @@ function start() {
 
 function getClass(time) {
   if (times.includes(time)) {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i <= totalClasses; i++) {
       if (times[i] == time) {
-        var link = terminalLink(classes[i][0], classes[i][1]);
+        var link = terminalLink(periods[i][0], periods[i][1]);
         var toSend = 'Your Current Period is ' + link;
         console.log(toSend);
       }

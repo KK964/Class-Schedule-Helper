@@ -1,4 +1,20 @@
 {
+  "days": {
+    "Read This Please": {
+      "days": {
+        "Sunday": "0",
+        "Monday": "1",
+        "Tuesday": "2",
+        "Wednesday": "3",
+        "Thursday": "4",
+        "Friday": "5",
+        "Saturday": "6"
+      }
+    },
+    "no_school": ["0", "6"],
+    "a_days": ["1"],
+    "b_days": ["2", "3", "4", "5"]
+  },
   "time": {
     "monday": {
       "1": "8:34 AM",

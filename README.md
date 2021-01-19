@@ -13,7 +13,7 @@ This tool required [Node.js][njs]
 
 ### Setup
 
-Run `$ npm i` to download the dependencies.
+Run `start.bat`
 Make `classes.json` and format it the way shown in [classes.example.json][example].
 It is recommended to set the time a couple of minutes before the class starts.
 
